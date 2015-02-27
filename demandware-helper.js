@@ -1,3 +1,4 @@
+/*
 var hello = function() {
 
    var xhr = new XMLHttpRequest();
@@ -21,6 +22,7 @@ var hello = function() {
   }, 3000);
 
 }
+*/
 
 var demandwareRestApi = function (method,url,params) {
 			
@@ -45,6 +47,9 @@ var demandwareRestApi = function (method,url,params) {
         		urlParams.push('client_id=' + clientId);
         		callUrl += urlParams.join('&');
 
-        return callUrl;
+        myHttp("GET", callUrl); 
           		
 }
+
+
+
