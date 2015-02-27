@@ -1,8 +1,7 @@
-/*
 var hello = function() {
 
    var xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22Miami%2C%20IL%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys");
+  xhr.open("GET", "https://3tierlogic01-tech-prtnr-na01-dw.demandware.net/s/SiteGenesis/dw/shop//v15_2/categories/root?levels=2&client_id=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
   xhr.send();
 
 
@@ -13,16 +12,17 @@ var hello = function() {
     console.log(xhr.readyState);
     if (xhr.readyState == 4 & xhr.status == 200)
       {
-       var r = JSON.parse(xhr.responseText);
-        document.write("Location: "+ r.query.results.channel.location.city+", "+ r.query.results.channel.location.region+"<br>");
-       document.write("Temperature: "+r.query.results.channel.item.condition.temp+"°F<br>")
-       document.write("Wind Chill : "+r.query.results.channel.wind.chill+"°F")
+        document.write(xhr.responseText)
+        // var r = JSON.parse(xhr.responseText);
+        // document.write("Location: "+ r.query.results.channel.location.city+", "+ r.query.results.channel.location.region+"<br>");
+        // document.write("Temperature: "+r.query.results.channel.item.condition.temp+"°F<br>")
+        // document.write("Wind Chill : "+r.query.results.channel.wind.chill+"°F")
         
       }
   }, 3000);
 
 }
-*/
+
 
 var demandwareRestApi = function (method,url,params) {
 
