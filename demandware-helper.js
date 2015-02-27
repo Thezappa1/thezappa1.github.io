@@ -1,3 +1,7 @@
+var Hello = function() {
+  alert("Hello!")
+}
+
 var demandwareRestApi = function (method,url,params) {
 			
         var myHttp = function(method, theUrl) {
@@ -20,7 +24,7 @@ var demandwareRestApi = function (method,url,params) {
         		}
         		urlParams.push('client_id=' + clientId);
         		callUrl += urlParams.join('&');
-            
+
         return callUrl;
           		
 }
