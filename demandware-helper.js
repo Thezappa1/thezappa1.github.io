@@ -46,27 +46,7 @@ var demandwareRestApi = function (method,url,params) {
         		urlParams.push('client_id=' + clientId);
         		callUrl += urlParams.join('&');
 
-          // var xhr = myHttp("GET",callUrl);
-          // xhr.onreadystatechange = setInterval(function(){
-          //  console.log(xhr.readyState);
-          // if (xhr.readyState == 4 & xhr.status == 200)
-          //   {
-          //     var r = JSON.parse(xhr.responseText);
-          //     document.write(r)
-          //   }
-          // }, 3000);
-
-          var xmlHttp = myHttp("GET", callUrl);
-          xmlHttp.onreadystatechange = setInterval(function(){
-              console.log(xmlHttp.readyState);
-              if (xmlHttp.readyState == 4 & xmlHttp.status == 200)
-                {
-                 var r = JSON.parse(xmlHttp.responseText);
-                  document.write(r);
-                  
-                }
-            }, 3000);
-
+        document.write(callUrl);
           		
 }
 
