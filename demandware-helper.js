@@ -1,6 +1,15 @@
 var demandwareRestApi = function (method,url,params) {
 			
-				var baseUrl = "https://3tierlogic01-tech-prtnr-na01-dw.demandware.net/s/SiteGenesis/dw/shop/"
+        var myHttp = function(method, theUrl) {
+          var xmlHttp = null;
+          xmlHttp = new XMLHttpRequest();
+          xmlHttp.open(method, theUrl, false );
+          xmlHttp.send( null );
+         return xmlHttp.responseText;
+        } 
+
+
+			  var baseUrl = "https://3tierlogic01-tech-prtnr-na01-dw.demandware.net/s/SiteGenesis/dw/shop/"
 				var apiVersion = "v15_2"
 				var clientId = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 				
@@ -12,11 +21,6 @@ var demandwareRestApi = function (method,url,params) {
         		urlParams.push('client_id=' + clientId);
         		callUrl += urlParams.join('&');
 
-        		return $http({
-          			url: callUrl,
-          			method: method
-        		}).then(function(result) {
-          			//resolve the promise as the data
-          		return result.data;
-        		});
+        return myHttp(method, url)
+          		
 }
