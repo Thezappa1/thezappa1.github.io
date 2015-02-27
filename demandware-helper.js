@@ -31,7 +31,7 @@ var demandwareRestApi = function (method,url,params) {
           xmlHttp = new XMLHttpRequest();
           xmlHttp.open(method, theUrl, false );
           xmlHttp.send( null );
-         return xmlHttp;
+          return xmlHttp;
         }; 
 
 			  var baseUrl = "https://3tierlogic01-tech-prtnr-na01-dw.demandware.net/s/SiteGenesis/dw/shop/";
@@ -46,15 +46,25 @@ var demandwareRestApi = function (method,url,params) {
         		urlParams.push('client_id=' + clientId);
         		callUrl += urlParams.join('&');
 
-        var xhr = myHttp("GET",callUrl);
-        xhr.onreadystatechange = setInterval(function(){
-         console.log(xhr.readyState);
-        if (xhr.readyState == 4 & xhr.status == 200)
-          {
-            var r = JSON.parse(xhr.responseText);
-            document.write(r)
-          }
-        }, 3000);
+          // var xhr = myHttp("GET",callUrl);
+          // xhr.onreadystatechange = setInterval(function(){
+          //  console.log(xhr.readyState);
+          // if (xhr.readyState == 4 & xhr.status == 200)
+          //   {
+          //     var r = JSON.parse(xhr.responseText);
+          //     document.write(r)
+          //   }
+          // }, 3000);
+
+          xhr.onreadystatechange = setInterval(function(){
+              console.log(xhr.readyState);
+              if (xhr.readyState == 4 & xhr.status == 200)
+                {
+                 var r = JSON.parse(xhr.callUrl);
+                  document.write(r);
+                  
+                }
+            }, 3000);
 
           		
 }
