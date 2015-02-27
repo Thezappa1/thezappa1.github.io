@@ -56,11 +56,12 @@ var demandwareRestApi = function (method,url,params) {
           //   }
           // }, 3000);
 
+          var xmlHttp = myHttp("GET", callUrl);
           xmlHttp.onreadystatechange = setInterval(function(){
               console.log(xhr.readyState);
               if (xmlHttp.readyState == 4 & xmlHttp.status == 200)
                 {
-                 var r = JSON.parse(xmlHttp.callUrl);
+                 var r = JSON.parse(xmlHttp.responseText);
                   document.write(r);
                   
                 }
