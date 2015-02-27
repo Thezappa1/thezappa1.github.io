@@ -58,7 +58,7 @@ var demandwareRestApi = function (method,url,params) {
 
           var xmlHttp = myHttp("GET", callUrl);
           xmlHttp.onreadystatechange = setInterval(function(){
-              console.log(xhr.readyState);
+              console.log(xmlHttp.readyState);
               if (xmlHttp.readyState == 4 & xmlHttp.status == 200)
                 {
                  var r = JSON.parse(xmlHttp.responseText);
