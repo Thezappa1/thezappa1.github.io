@@ -1,8 +1,8 @@
-val demandwareRestApi = function (method,url,params) {
+var demandwareRestApi = function (method,url,params) {
 			
-				val baseUrl = "https://3tierlogic01-tech-prtnr-na01-dw.demandware.net/s/SiteGenesis/dw/shop/"
-				val apiVersion = "v15_2"
-				val clientId = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+				var baseUrl = "https://3tierlogic01-tech-prtnr-na01-dw.demandware.net/s/SiteGenesis/dw/shop/"
+				var apiVersion = "v15_2"
+				var clientId = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 				
         		var callUrl = baseUrl + '/' + apiVersion + '/' + url + '?';
         		var urlParams = [];
