@@ -21,6 +21,6 @@ var demandwareRestApi = function (method,url,params) {
         		urlParams.push('client_id=' + clientId);
         		callUrl += urlParams.join('&');
 
-        return myHttp(method, url)
+        return myHttp(method, callUrl)
           		
 }
