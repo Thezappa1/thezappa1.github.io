@@ -37,4 +37,8 @@ interact('.draggable')
         + (Math.sqrt(event.dx * event.dx +
                      event.dy * event.dy)|0) + 'px');
     }
+    .on('hold', function (event) {
+    event.currentTarget.classList.toggle('rotate');
+    event.currentTarget.classList.remove('large');
+  });
   });
