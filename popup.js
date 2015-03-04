@@ -1,4 +1,4 @@
-$.noConflict();
+jQuery.noConflict();
 jQuery(document).ready(function($){
 	//open popup
 	jQuery("a[class='cd-popup-trigger']").on('click', function(event){
