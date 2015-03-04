@@ -1,9 +1,3 @@
-<script type="text/javascript">
-jQuery("a[id='id-to-select']").click(function() {
-    // Code here
-});
-</script>
-
 jQuery(document).ready(function($){
 			//open popup
 			jQuery("a[class='cd-popup-trigger']").on('click', function(event){
