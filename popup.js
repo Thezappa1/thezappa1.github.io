@@ -1,13 +1,13 @@
 jQuery.noConflict();
 jQuery(document).ready(function($){
 	//open popup
-	jQuery("a[class='cd-popup-trigger']").on('click', function(event){
+	$("a[class='cd-popup-trigger']").on('click', function(event){
 		event.preventDefault();
 		$('.cd-popup').addClass('is-visible');
 	});
 	
 	//close popup
-	jQuery("a[class='cd-popup']").on('click', function(event){
+	$("a[class='cd-popup']").on('click', function(event){
 		if( $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup') ) {
 			event.preventDefault();
 			$(this).removeClass('is-visible');
