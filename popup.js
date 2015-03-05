@@ -7,8 +7,8 @@ jQuery(document).ready(function($){
 	});
 	
 	//close popup
-	$("a[class='cd-popup']").on('click', function(event){
-		if( $(event.target).is("a[class='cd-popup-close']") || $(event.target).is("a[class='cd-popup']") ) {
+	$("div[class='cd-popup']").on('click', function(event){
+		if( $(event.target).is("a[class='cd-popup-close']") || $(event.target).is("div[class='cd-popup']") ) {
 			event.preventDefault();
 			$(this).removeClass('is-visible');
 		}
@@ -16,7 +16,7 @@ jQuery(document).ready(function($){
 	//close popup when clicking the esc keyboard button
 	$(document).keyup(function(event){
     	if(event.which=='27'){
-    		$("a[class='cd-popup']").removeClass('is-visible');
+    		$("div[class='cd-popup']").removeClass('is-visible');
 	    }
     });
 });
